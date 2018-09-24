@@ -1,85 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="49" started-at="2018-09-24T07:00:08Z" finished-at="2018-09-24T07:00:09Z">
+  <suite name="Default suite" duration-ms="9" started-at="2018-09-24T10:31:45Z" finished-at="2018-09-24T10:31:45Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="49" started-at="2018-09-24T07:00:08Z" finished-at="2018-09-24T07:00:09Z">
-      <class name="zoom12.J">
-        <test-method status="PASS" signature="beforeSuit()[pri:0, instance:zoom12.J@4520ebad]" name="beforeSuit" is-config="true" duration-ms="8" started-at="2018-09-24T07:00:08Z" finished-at="2018-09-24T07:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuit -->
-        <test-method status="PASS" signature="beforeTestrun()[pri:0, instance:zoom12.J@4520ebad]" name="beforeTestrun" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:08Z" finished-at="2018-09-24T07:00:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTestrun -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:zoom12.J@4520ebad]" name="beforeClass" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:zoom12.J@4520ebad]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="login()[pri:1, instance:zoom12.J@4520ebad]" name="login" duration-ms="4" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:zoom12.J@4520ebad]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="dashboard()[pri:2, instance:zoom12.J@4520ebad]" name="dashboard" duration-ms="2" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- dashboard -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:zoom12.J@4520ebad]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:zoom12.J@4520ebad]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:zoom12.J@4520ebad]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="changePassword()[pri:3, instance:zoom12.J@4520ebad]" name="changePassword" duration-ms="3" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- changePassword -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:zoom12.J@4520ebad]" name="afterMethod" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="logout()[pri:4, instance:zoom12.J@4520ebad]" name="logout" duration-ms="2" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logout -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:zoom12.J@4520ebad]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:zoom12.J@4520ebad]" name="afterMethod" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterTestrun()[pri:0, instance:zoom12.J@4520ebad]" name="afterTestrun" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTestrun -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:zoom12.J@4520ebad]" name="afterClass" is-config="true" duration-ms="0" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterSuit()[pri:0, instance:zoom12.J@4520ebad]" name="afterSuit" is-config="true" duration-ms="1" started-at="2018-09-24T07:00:09Z" finished-at="2018-09-24T07:00:09Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterSuit -->
-      </class> <!-- zoom12.J -->
+    <test name="Default test" duration-ms="9" started-at="2018-09-24T10:31:45Z" finished-at="2018-09-24T10:31:45Z">
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
