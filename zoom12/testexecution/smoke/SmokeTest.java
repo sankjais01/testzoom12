@@ -1,30 +1,31 @@
 package smoke;
 
 import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.FindBy;
-import org.testng.annotations.BeforeSuite;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Test;
 
-import locators.Locator;
 import pom.Login;
 import zoom12.TestData;
 
 public class SmokeTest {
 
-	
-	WebDriver driver=null;
+	WebDriver driver = null;
+
 	@BeforeTest
 	public void createDriver() {
-		System.out.println("BEFOR TEST");
+		System.out.println("BEFORE TEST");
 		TestData d = new TestData();
 		d.readExcelData();
-		driver = new FirefoxDriver();
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\Sanket\\git\\repository\\zoom12\\lib\\chrome\\chromedriver.exe");
+		driver = new ChromeDriver();
+	}
+
+	@BeforeMethod
+	public void t() {
+		System.out.println("before method");
 	}
 
 	@Test
@@ -35,11 +36,8 @@ public class SmokeTest {
 
 	}
 
-	/*public void destroy() {
-		// driver.close();
-	}*/
+	/*
+	 * public void destroy() { // driver.close(); }
+	 */
 
-	
-	
-	
 }
