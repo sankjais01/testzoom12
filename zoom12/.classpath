@@ -5,5 +5,9 @@
 	<classpathentry kind="src" path="java"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="testexecution"/>
+	<classpathentry kind="src" path="lib"/>
+	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="lib" path="resources/lib/poi/poi-4.0.0/poi-4.0.0.jar"/>
+	<classpathentry kind="lib" path="resources/lib/poi/poi-4.0.0/ooxml-lib/xmlbeans-3.0.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
