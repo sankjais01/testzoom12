@@ -11,29 +11,31 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
 import pom.Login;
+import zoom12.BrowserFactory;
 import zoom12.TestData;
 
 public class SmokeTest {
 
-	WebDriver driver = null;
+	WebDriver driver;
 
+
+	
 	@BeforeTest
 	public void createDriver() {
 		System.out.println("BEFORE TEST");
 		TestData d = new TestData();
 		d.readExcelData();
-		/*
-		 * System.setProperty("webdriver.chrome.driver",
-		 * "C:\\Users\\Sanket\\git\\repository\\zoom12\\lib\\chrome\\chromedriver.exe");
-		 */ driver = new ChromeDriver();
-		driver.manage().window().maximize();
+		driver = BrowserFactory.createBrowser("chrome");
+
 	}
 
 	@BeforeMethod
 	public void t() {
-		System.out.println("before method");
+		System.out.println("before test execution");
 	}
 
+	
+	
 	@Test
 	public void LoginTest() {
 		Login.ValidLogin(driver);
