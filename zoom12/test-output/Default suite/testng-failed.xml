@@ -6,6 +6,7 @@
       <class name="smoke.SmokeTest">
         <methods>
           <include name="LoginTest"/>
+          <include name="destroy"/>
           <include name="t"/>
           <include name="createDriver"/>
         </methods>

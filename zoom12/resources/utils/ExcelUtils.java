@@ -20,6 +20,8 @@ public class ExcelUtils {
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+			System.out.println("please check file path");
+			System.err.println(e);
 		}
 
 		catch (IOException e) {
