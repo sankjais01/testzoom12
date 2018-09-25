@@ -6,6 +6,7 @@ import locators.Locator;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
@@ -17,15 +18,15 @@ import zoom12.TestData;
 public class SmokeTest {
 
 	WebDriver driver;
+	TestData data= new TestData();
 
-
-	
 	@BeforeTest
 	public void createDriver() {
 		System.out.println("BEFORE TEST");
-		TestData d = new TestData();
-		d.readExcelData();
+		TestData data = new TestData();
+		data.readExcelData();
 		driver = BrowserFactory.createBrowser("chrome");
+		driver.get(Locator.LOGIN_URL);
 
 	}
 
@@ -34,17 +35,18 @@ public class SmokeTest {
 		System.out.println("before test execution");
 	}
 
-	
-	
 	@Test
-	public void LoginTest() {
-		Login.ValidLogin(driver);
+	void test()
+	{
+	Login.ValidLogin(driver, data);
+	
+		Assert.assertEquals(Locator.DASHBOARD_URL, driver.getCurrentUrl());
 		if (driver.getCurrentUrl().equalsIgnoreCase(Locator.DASHBOARD_URL)) {
 			System.out.println("Test Pass");
 		} else {
 			System.out.println("Refreshing page");
 			driver.navigate().refresh();
-			Login.ValidLogin(driver);
+			Login.ValidLogin(driver, data);
 
 		}
 
@@ -56,6 +58,7 @@ public class SmokeTest {
 
 		// @FindBy(xpath)
 
+	
 	}
 
 	@AfterTest
