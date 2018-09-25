@@ -7,7 +7,6 @@
         <methods>
           <include name="destroy"/>
           <include name="test"/>
-          <include name="t"/>
           <include name="createDriver"/>
         </methods>
       </class> <!-- smoke.SmokeTest -->

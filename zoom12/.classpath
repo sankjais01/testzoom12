@@ -7,11 +7,12 @@
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="src" path="testexecution"/>
 	<classpathentry kind="src" path="lib"/>
-	<classpathentry kind="lib" path="lib/selenium/selenium-server-standalone-3.9.0.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-3.15/poi-ooxml-3.15.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-3.15/poi-ooxml-schemas-3.15.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-3.15/poi-3.15.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-3.15/ooxml-lib/xmlbeans-2.6.0.jar"/>
 	<classpathentry kind="lib" path="lib/poi/poi-3.15/lib/commons-collections4-4.1.jar"/>
+	<classpathentry kind="lib" path="lib/selenium/selenium-server-standalone-3.11.0.jar"/>
+	<classpathentry kind="lib" path="lib/selenium-support-2.29.1-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -18,36 +18,33 @@ import zoom12.TestData;
 public class SmokeTest {
 
 	WebDriver driver;
-	TestData data= new TestData();
+	TestData data = new TestData();
+	Login login;
 
 	@BeforeTest
 	public void createDriver() {
-		System.out.println("BEFORE TEST");
+		System.out.println("");
 		TestData data = new TestData();
 		data.readExcelData();
 		driver = BrowserFactory.createBrowser("chrome");
-		driver.get(Locator.LOGIN_URL);
+		//driver.get(Locator.LOGIN_URL);
 
 	}
 
-	@BeforeMethod
-	public void t() {
-		System.out.println("before test execution");
-	}
+	
 
 	@Test
-	void test()
-	{
-	Login.ValidLogin(driver, data);
-	
+	void test() {
+		login = new Login(driver);
+		login.ValidLogin(data);
+
 		Assert.assertEquals(Locator.DASHBOARD_URL, driver.getCurrentUrl());
 		if (driver.getCurrentUrl().equalsIgnoreCase(Locator.DASHBOARD_URL)) {
 			System.out.println("Test Pass");
 		} else {
 			System.out.println("Refreshing page");
 			driver.navigate().refresh();
-			Login.ValidLogin(driver, data);
-
+			login.ValidLogin(data);
 		}
 
 		if (driver.getCurrentUrl().equalsIgnoreCase(Locator.DASHBOARD_URL)) {
@@ -58,7 +55,6 @@ public class SmokeTest {
 
 		// @FindBy(xpath)
 
-	
 	}
 
 	@AfterTest
