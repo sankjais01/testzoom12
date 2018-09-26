@@ -3,8 +3,8 @@ package locators;
 public class Locator {
 
 	//URL OF EACH PAGES
-	public static final String DASHBOARD_URL = "http://staging.zoom12.com/#/";
-	
+	public static final String LOGIN_URL = "http://staging.zoom12.com/#/";
+	public static final String DASHBOARD_URL = "http://staging.zoom12.com/#/dashboard/";
 	
 	//XPATH OF OBJECTS OVER LOGIN PAGE 
 	public static final String USERNAME_XPATH = "//input[@id='name']";

@@ -2,37 +2,29 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15642" started-at="2018-09-24T18:26:35Z" finished-at="2018-09-24T18:26:50Z">
+  <suite name="Default suite" duration-ms="53026" started-at="2018-09-25T18:09:18Z" finished-at="2018-09-25T18:10:11Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15642" started-at="2018-09-24T18:26:35Z" finished-at="2018-09-24T18:26:50Z">
+    <test name="Default test" duration-ms="53026" started-at="2018-09-25T18:09:18Z" finished-at="2018-09-25T18:10:11Z">
       <class name="smoke.SmokeTest">
-        <test-method status="PASS" signature="createDriver()[pri:0, instance:smoke.SmokeTest@397fbdb]" name="createDriver" is-config="true" duration-ms="5585" started-at="2018-09-24T18:26:35Z" finished-at="2018-09-24T18:26:40Z">
+        <test-method status="PASS" signature="createDriver()[pri:0, instance:smoke.SmokeTest@2781e022]" name="createDriver" is-config="true" duration-ms="4632" started-at="2018-09-25T18:09:18Z" finished-at="2018-09-25T18:09:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method status="PASS" signature="t()[pri:0, instance:smoke.SmokeTest@397fbdb]" name="t" is-config="true" duration-ms="0" started-at="2018-09-24T18:26:40Z" finished-at="2018-09-24T18:26:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- t -->
-        <test-method status="FAIL" signature="LoginTest()[pri:0, instance:smoke.SmokeTest@397fbdb]" name="LoginTest" duration-ms="10017" started-at="2018-09-24T18:26:40Z" finished-at="2018-09-24T18:26:50Z">
-          <exception class="org.openqa.selenium.WebDriverException">
+        <test-method status="FAIL" signature="test()[pri:0, instance:smoke.SmokeTest@2781e022]" name="test" duration-ms="41158" started-at="2018-09-25T18:09:23Z" finished-at="2018-09-25T18:10:04Z">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[java.net.SocketTimeoutException: timeout
-Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
-System info: host: 'SANKET-PC', ip: '192.168.1.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: RemoteWebDriver]]>
+              <![CDATA[expected [http://staging.zoom12.com/#/] but found [http://staging.zoom12.com/#/dashboard/]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: java.net.SocketTimeoutException: timeout
-Build info: version: '3.9.0', revision: '698b3178f0', time: '2018-02-05T14:56:13.134Z'
-System info: host: 'SANKET-PC', ip: '192.168.1.5', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_101'
-Driver info: driver.version: RemoteWebDriver
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:92)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:601)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:325)
-at pom.Login.ValidLogin(Login.java:18)
-at smoke.SmokeTest.LoginTest(SmokeTest.java:33)
+              <![CDATA[java.lang.AssertionError: expected [http://staging.zoom12.com/#/] but found [http://staging.zoom12.com/#/dashboard/]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertEqualsImpl(Assert.java:137)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:453)
+at org.testng.Assert.assertEquals(Assert.java:463)
+at smoke.SmokeTest.test(SmokeTest.java:41)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -58,48 +50,16 @@ at org.testng.TestNG.run(TestNG.java:1017)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.net.SocketTimeoutException: timeout
-at okio.Okio$4.newTimeoutException(Okio.java:230)
-at okio.AsyncTimeout.exit(AsyncTimeout.java:285)
-at okio.AsyncTimeout$2.read(AsyncTimeout.java:241)
-at okio.RealBufferedSource.indexOf(RealBufferedSource.java:345)
-at okio.RealBufferedSource.readUtf8LineStrict(RealBufferedSource.java:217)
-at okhttp3.internal.http1.Http1Codec.readHeaderLine(Http1Codec.java:212)
-at okhttp3.internal.http1.Http1Codec.readResponseHeaders(Http1Codec.java:189)
-at okhttp3.internal.http.CallServerInterceptor.intercept(CallServerInterceptor.java:88)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:45)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
-at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
-at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
-at okhttp3.RealCall.execute(RealCall.java:77)
-at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:97)
-at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:47)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:157)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-... 29 more
-Caused by: java.net.SocketTimeoutException: Read timed out
-at java.net.SocketInputStream.socketRead0(Native Method)
-at java.net.SocketInputStream.socketRead(Unknown Source)
-at java.net.SocketInputStream.read(Unknown Source)
-at java.net.SocketInputStream.read(Unknown Source)
-at okio.Okio$2.read(Okio.java:139)
-at okio.AsyncTimeout$2.read(AsyncTimeout.java:237)
-... 52 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- LoginTest -->
+        </test-method> <!-- test -->
+        <test-method status="PASS" signature="destroy()[pri:0, instance:smoke.SmokeTest@2781e022]" name="destroy" is-config="true" duration-ms="7217" started-at="2018-09-25T18:10:04Z" finished-at="2018-09-25T18:10:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- destroy -->
       </class> <!-- smoke.SmokeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
