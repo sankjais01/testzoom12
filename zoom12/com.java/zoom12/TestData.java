@@ -10,7 +10,7 @@ public class TestData {
 
 	public boolean readExcelData() {
 		ExcelUtils Tdata = new ExcelUtils(System.getProperty("user.dir")+
-				"\\resources\\utils\\zoom12User.xlsx", "zoom12Users");
+				"\\com.resources\\utils\\zoom12User.xlsx", "zoom12Users");
 		try {
 			int rows = Tdata.excel_get_rows();
 			int cols = Tdata.excel_get_columns();

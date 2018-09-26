@@ -12,16 +12,16 @@ public class BrowserFactory {
 	public static WebDriver createBrowser(String type) {
 		if (type.contains("chrome")) {
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+
-					"\\lib\\chrome\\chromedriver.exe");
+					"\\com.lib\\chrome\\chromedriver.exe");
 			driver = new ChromeDriver();
 
 		} else if (type.contains("ie")) {
 			System.setProperty("webdriver.ie.driver",System.getProperty("user.dir")+
-					"\\lib\\ie\\IEDriverServer_x64_3.14.0\\IEDriverServer.exe");
+					"\\com.lib\\ie\\IEDriverServer_x64_3.14.0\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 		} else if (type.contains("firefox")) {
 			System.setProperty("webdriver.gecko.driver",System.getProperty("user.dir")+
-					"\\lib\\gecko\\geckodriver.exe");
+					"\\com.lib\\gecko\\geckodriver.exe");
 			driver = new FirefoxDriver();
 		}
 

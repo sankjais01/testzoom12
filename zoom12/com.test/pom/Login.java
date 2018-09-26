@@ -45,33 +45,17 @@ public class Login {
 
 	public boolean ValidLogin(TestData data) {
 
-		WebDriverWait wait = new WebDriverWait(driver, 10000);
 		boolean flag = true;
+		WebDriverWait wait = new WebDriverWait(driver, 10000);
 		driver.get(Locator.LOGIN_URL);
 		try {
-			Thread.sleep(5000);
-			username.sendKeys(data.USERNAME); //
-			passowrd.sendKeys(data.PASSWORD); //
+			wait.until(ExpectedConditions.visibilityOf(username));
+			username.sendKeys(data.USERNAME);
+			wait.until(ExpectedConditions.visibilityOf(passowrd));
+			passowrd.sendKeys(data.PASSWORD);
 			wait.until(ExpectedConditions.visibilityOf(loginButton));
 			loginButton.click();
 
-			// @FindBy(xpath=Locator.USERNAME_XPATH); //
-
-			/*
-			 * driver.manage().timeouts().implicitlyWait(300000, TimeUnit.SECONDS);
-			 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locator.
-			 * USERNAME_XPATH)));
-			 * driver.findElement(By.xpath(Locator.USERNAME_XPATH)).sendKeys(data.USERNAME);
-			 * wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locator.
-			 * PASSWORD_XPATH)));
-			 * driver.findElement(By.xpath(Locator.PASSWORD_XPATH)).sendKeys(data.PASSWORD);
-			 * // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(Locator.
-			 * LOGINBUTTON_XPATH)));
-			 * wait.until(ExpectedConditions.elementToBeClickable(By.xpath(Locator.
-			 * LOGINBUTTON_XPATH)));
-			 * driver.findElement(By.xpath(Locator.LOGINBUTTON_XPATH)).click();
-			 * Thread.sleep(3000);
-			 */
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
