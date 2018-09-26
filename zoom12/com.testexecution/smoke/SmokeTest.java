@@ -1,6 +1,9 @@
 package smoke;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -28,16 +31,19 @@ public class SmokeTest {
 	}
 
 	@Test
-	void test() {
+	void test() throws InterruptedException {
 		login = new Login(driver);
 		login.ValidLogin(data);
-
+		Thread.sleep(3000);
 		if (driver.getCurrentUrl().equalsIgnoreCase(Locator.DASHBOARD_URL)) {
 			System.out.println("Test Pass");
 		} else {
 			System.out.println("Refreshing page");
 			driver.navigate().refresh();
 			login.ValidLogin(data);
+			Thread.sleep(3000);
+
+			System.out.println(driver.getCurrentUrl());
 			if (driver.getCurrentUrl().equalsIgnoreCase(Locator.DASHBOARD_URL)) {
 				System.out.println("Test Pass");
 
@@ -52,7 +58,7 @@ public class SmokeTest {
 
 	@AfterTest
 	public void destroy() throws InterruptedException {
-		Thread.sleep(60000);
+		Thread.sleep(6000);
 		driver.close();
 	}
 

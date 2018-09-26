@@ -6,6 +6,7 @@ public class test {
 		// TODO Auto-generated method stub
 
 		System.out.println(System.getProperty("user.dir"));
+		System.out.println(System.getProperty("os.name"));
 		
 		
 	}

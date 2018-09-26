@@ -11,6 +11,8 @@ public class BrowserFactory {
 
 	public static WebDriver createBrowser(String type) {
 		if (type.contains("chrome")) {
+			
+			
 			System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+
 					"\\com.lib\\chrome\\chromedriver.exe");
 			driver = new ChromeDriver();
